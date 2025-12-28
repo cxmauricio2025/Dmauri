@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una Historia que contar - Carlos Mauricio Mendoza Pita</title>
+    <!-- Google Fonts: Playfair Display (Serif) y Great Vibes (Script) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="book-container flex-col">
+        <!-- Contenedor de Páginas -->
+        <div id="book" class="relative w-full flex justify-center">
+
+            <!-- PORTADA PRINCIPAL -->
+            <div class="page active" id="main-cover" style="padding:0;">
+                <img src="img/portada_principal.jpg" alt="Portada Principal"
+                    style="width:100%; height:100%; object-fit:fill; position:absolute; top:0; left:0; z-index:20;">
+                <div
+                    style="position: absolute; bottom: 10px; width: 100%; text-align: center; color: white; font-weight: bold; font-size: 10px; z-index: 30; font-family: sans-serif; letter-spacing: 1px;">
+                    "DMAURI" © C.MENDOZA - 2025 ALL RIGHTS RESERVED
+                </div>
+            </div>
+
+            <!-- PAGINA 1: PORTADA INTERNA -->
+            <div class="page" id="p1">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area items-center text-center">
+                    <h1 class="script-font text-5xl mb-4">Una Historia que contar</h1>
+                    <h2 class="text-2xl italic mb-12">Un Amor Eterno, Un Destino revelado</h2>
+                    <div class="w-16 h-px bg-yellow-600 mb-8"></div>
+                    <p class="text-xl font-bold uppercase tracking-widest">Carlos Mauricio Mendoza Pita</p>
+                    <div class="mt-24 text-sm tracking-widest text-gray-500 uppercase">
+                        Editorial DMAURI<br>Ferreñafe - DIC. 2025
+                    </div>
+                </div>
+                <div class="page-number">1</div>
+            </div>
+
+            <!-- PAGINA 2: CONTRAPORTADA -->
+            <div class="page" id="p2">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area flex flex-col items-center justify-between h-full pt-10 pb-8">
+                    <!-- Imagen y Frase -->
+                    <div class="flex flex-col items-center">
+                        <img src="img/destin_rosas.jpg" alt="Ilustración"
+                            class="w-2/3 h-auto max-h-64 object-cover rounded shadow-md mb-6 border border-yellow-600/30">
+                        <p class="text-center italic text-yellow-700/90 font-serif px-6 leading-relaxed text-sm">
+                            "Donde las rosas florecen y el incienso perfuma el aire, el destino susurra los secretos que
+                            el corazón ya conoce."
+                        </p>
+                    </div>
+
+                    <!-- Creditos reducidos -->
+                    <div class="text-xs text-gray-500 text-center w-full mt-4">
+                        <p class="font-bold">© 2025 Carlos Mauricio Mendoza Pita</p>
+                        <p>Diseño: DMAURI Labs | Ferreñafe, Perú.</p>
+                        <p class="script-font text-xl mt-2 text-gray-400">DMAURI</p>
+                    </div>
+                </div>
+                <div class="page-number"></div>
+            </div>
+            <!-- PAGINA 3: CREDITOS -->
+            <div class="page" id="p3">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area text-xs text-gray-600 leading-relaxed justify-end pb-12">
+                    <p class="mb-4 font-bold text-gray-800 text-sm">© 2025 Carlos Mauricio Mendoza Pita</p>
+                    <p class="mb-2">Todos los derechos reservados. Ninguna parte de esta publicación puede ser
+                        reproducida, distribuida o transmitida de ninguna forma ni por ningún medio, incluyendo
+                        fotocopias, grabaciones u otros métodos electrónicos o mecánicos, sin el permiso previo por
+                        escrito del editor.</p>
+                    <p class="mb-2">Diseño de interiores: DMAURI Labs</p>
+                    <p class="mb-2">Impreso en Ferreñafe, Lambayeque, Perú.</p>
+                    <p class="mb-8 italic">Primera Edición: Diciembre 2025</p>
+                    <p class="script-font text-2xl text-center">DMAURI</p>
+                </div>
+                <div class="page-number"></div>
+            </div>
+
+            <!-- PAGINA 4: DEDICATORIA -->
+            <div class="page" id="p4">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area italic text-center px-10">
+                    <p class="mb-6 text-lg">"Para aquella alma Mariana que dio sentido a mi silencio, y para el destino,
+                        que con hilos invisibles, nos guió hasta el 19 de Mayo."</p>
+                    <p class="text-gray-500">A la Virgen María Auxiliadora, por cruzar nuestros caminos cuando el mundo
+                        parecía detenerse.</p>
+                    <p class="mb-6 text-lg"><br>A quienes creen en el amor que trasciende el tiempo y el espacio, a esas
+                        almas que se encuentran una y otra vez, hasta que la historia finalmente se completa</p>
+
+                </div>
+                <div class="page-number"></div>
+            </div>
+
+            <!-- PAGINA 5: PROLOGO -->
+            <div class="page" id="p5">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area">
+                    <h3 class="script-font text-4xl text-center mb-6">Prólogo</h3>
+                    <p class="dropcap mb-4">El amor no es un evento fortuito, sino una sinfonía que se ensaya en el éter
+                        mucho antes de que la primera nota sea escuchada. En estas páginas, el lector encontrará un mapa
+                        de coincidencias que no son tales, sino fragmentos de un destino revelado a través de los ojos
+                        de la fe y el deseo.</p>
+                    <p>Desde la primera mirada litúrgica hasta la noche que se volvió infinita, esta historia es un
+                        testimonio de que el tiempo es solo una ilusión cuando dos almas están destinadas a converger.
+                        Cada palabra aquí escrita ha sido destilada de los momentos en que el tiempo pareció detenerse,
+                        permitiendo que la eternidad se filtrara por las grietas de lo cotidiano
+                    </p>
+                </div>
+                <div class="page-number"></div>
+            </div>
+
+            <!-- PAGINA 6: TABLA DE CONTENIDOS -->
+            <div class="page" id="p6">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area">
+                    <h3 class="script-font text-4xl text-center mb-10">Contenidos</h3>
+                    <ul class="space-y-4 text-sm uppercase tracking-widest">
+                        <li class="flex justify-between border-b border-dotted border-gray-400"><span>Capítulo 1: La
+                                Liturgia de la Mirada</span> <span>8</span></li>
+                        <li class="flex justify-between border-b border-dotted border-gray-400"><span>Capítulo 2: El Eco
+                                en la Multitud</span> <span>10</span></li>
+                        <li class="flex justify-between border-b border-dotted border-gray-400"><span>Capítulo 3:
+                                Frecuencias Digitales</span> <span>13</span></li>
+                        <li class="flex justify-between border-b border-dotted border-gray-400"><span>Capítulo 4: La
+                                Antesala del Vértigo</span> <span>14</span></li>
+                        <li class="flex justify-between border-b border-dotted border-gray-400"><span>Capítulo 5: La
+                                Noche Infinita</span> <span>15</span></li>
+                        <li class="flex justify-between border-b border-dotted border-gray-400"><span>Epílogo</span>
+                            <span>19</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page-number"></div>
+            </div>
+
+            <!-- PAGINA 7: CAPITULO 1 -->
+            <div class="page" id="p7">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area">
+                    <h4 class="script-font text-3xl mb-4 text-center">Capítulo I</h4>
+                    <h5 class="text-center italic mb-6 text-gray-500">La Liturgia de la Mirada</h5>
+                    <p class="dropcap mb-4">El aire olía a incienso quemado y a promesas antiguas. La plaza estaba
+                        abarrotada, un mar de cabezas inclinadas bajo el peso de la fe y la tradición. La imagen de la
+                        Virgen María Auxiliadora flotaba sobre la multitud, dorada y solemne, avanzando con ese ritmo
+                        hipnótico que tienen las cosas que no pertenecen a este mundo.
+                        Pero para Dmauri, la divinidad no estaba en el anda procesional; estaba parada en la esquina
+                        opuesta, donde la sombra del campanario cortaba la luz de la tarde.
+                        Allí estaba Mariana, no era simplemente una mujer entre la gente; era un error en la matrix de
+                        la realidad, un punto de fuga donde convergían todas las líneas de perspectiva.
+                        La imagen era perfecta, casi pictórica: el caos de la multitud se desvanecía en un desenfoque
+                        periférico, dejando solo su rostro nítido.
+                    </p>
+                </div>
+                <div class="page-number"></div>
+            </div>
+            <div class="page" id="p8">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area">
+                    <!-- <h4 class="script-font text-3xl mb-4 text-center">Capítulo I</h4>
+                    <h5 class="text-center italic mb-6 text-gray-500">La Liturgia de la Mirada</h5> -->
+                    <p class="dropcap mb-4">Cuando ella giró la cabeza, sus ojos encontraron los de él. No fue un
+                        encuentro suave. Fue una colisión
+                        tectónica.</p>
+                    <p> En ese instante, entre el redoble de los tambores y los cánticos sacros, Dmauri sintió cómo su
+                        anatomía cambiaba; el corazón dejó
+                        de ser un órgano para convertirse en un martillo. Mariana, al otro lado del río de gente, sintió
+                        el mismo vértigo, esa caída libre sin moverse del suelo. Se miraron y, sin decir una palabra,
+                        firmaron un contrato invisible de pertenencia mutua.
+                    </p>
+                </div>
+                <div class="page-number"></div>
+            </div>
+
+            <!-- PAGINA 9: CAPITULO 2 -->
+            <div class="page" id="p9">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area">
+                    <h4 class="script-font text-3xl mb-4 text-center">Capítulo II</h4>
+                    <h5 class="text-center italic mb-6 text-gray-500">El Eco en la Multitud</h5>
+                    <p class="dropcap mb-4">La procesión siguió su curso, arrastrándolos en direcciones opuestas como
+                        mareas caprichosas. Pero el daño —o el milagro— ya estaba hecho. Mariana caminaba aturdida; la
+                        música de la banda sonaba lejana, amortiguada por el latido ensordecedor en sus sienes.
+                        <br> ¿Quién era él? Ese desconocido con ojos de tormenta que la había desnudado emocionalmente
+                        en medio de
+                        la plaza.
+                    </p>
+                    <p>Dmauri, por su parte, se sentía febril. La imagen de ella se había tatuado
+                        en su retina. Cada vez
+                        que parpadeaba, la veía: la luz recortando su perfil, la intensidad de su postura. No era solo
+                        atracción; era
+                        reconocimiento.
+                    </p>
+                    <p>Como si hubieran estado buscándose en vidas pasadas y finalmente hubieran coincidido en las
+                        coordenadas exactas de esa esquina. La ciudad, antes gris y rutinaria, ahora vibraba con una
+                        saturación de
+                        colores violentos. El amor, al iniciar, no es paz; es una guerra contra la soledad que uno no
+                        sabía que tenía.</p>
+
+                </div>
+                <div class="page-number"></div>
+            </div>
+            <!-- PAGINA 10: CAPITULO 2 (parte 2)-->
+            <div class="page" id="10">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area">
+                    <!-- <h4 class="script-font text-3xl mb-4 text-center">Capítulo II</h4>
+                    <h5 class="text-center italic mb-6 text-gray-500">El Eco en la Multitud</h5> -->
+                    <p class="dropcap mb-4">Dmauri rompió la inercia. Sus pies se movieron antes de que su mente
+                        pudiera formular una excusa lógica. Al acercarse, el aire parecía volverse más denso, cargado de
+                        un magnetismo que solo existe en las grandes historias de amor.
+                    </p>
+                    <p class="mt-4 italic">—Hola —dijo él, y su propia voz le sonó extraña, como si la hubiera
+                        recuperado de un sueño.</p><br>
+                    <p>Al presentarse, una chispa de estática mental lo sacudió. No era la primera vez que sus mundos
+                        se cruzaban. Entre las capas de su memoria, surgió una imagen borrosa: <b>seis años atrás</b>.
+                        Una
+                        calle cualquiera, un instante fugaz donde ella había captado su atención sin que él supiera por
+                        qué. En aquel entonces, solo fue un destello; hoy, era un incendio.
+                    </p>
+                    <p>Mientras hablaban, Dmauri cometió el error más dulce: <b>sostenerle la mirada</b>. Los ojos de
+                        Mariana
+                        no eran solo un color; eran un abismo de familiaridad. En ese puente visual, él sintió un vuelco
+                        violento en el corazón, una arritmia provocada por la certeza de que ella no era una
+                        desconocida, sino un reencuentro pendiente. </p>
+
+                </div>
+                <div class="page-number"></div>
+            </div>
+
+            <!-- PAGINA 11: CAPITULO 2 (parte 3)-->
+            <div class="page" id="11">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area">
+                    <!-- <h4 class="script-font text-3xl mb-4 text-center">Capítulo II</h4>
+                    <h5 class="text-center italic mb-6 text-gray-500">El Eco en la Multitud</h5> -->
+                    <p class="dropcap mb-4">Haciendo un esfuerzo titánico por controlar el temblor de sus sentidos, él
+                        se aventuró al
+                        precipicio:
+                    </p>
+                    <p class="italic bg-white/50 p-4 border-l-2 border-yellow-600 mb-4">—¿Podrías darme tu número de
+                        teléfono? —preguntó, intentando que la
+                        intensidad de su pecho no se
+                        filtrara en sus palabras.</p>
+                    <p>Mariana lo observó un segundo más, el tiempo suficiente para que el mundo alrededor de la
+                        procesión se detuviera. Sin preámbulos, sin promesas vacías, respondió con una brevedad que lo
+                        dejó sin aliento:</p>
+                    <p class="mt-4 italic">-Anota</p><br>
+                    <p>Dictó los dígitos como quien entrega una clave secreta. Y antes de que Dmauri pudiera procesar
+                        que el número de Mariana ahora estaba en sus manos, ella le dedicó una última mirada
+                        indescifrable, se dio la vuelta y se desvaneció entre la multitud fervorosa de la procesión. Él
+                        se quedó allí, con el teléfono quemándole la palma de la mano y el corazón gritándole que la
+                        cacería de su vida acababa de comenzar.</p>
+
+                </div>
+                <div class="page-number"></div>
+            </div>
+
+            <!-- PAGINA 12: CAPITULO 3 -->
+            <div class="page" id="p12">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <!-- <div class="corner-ornament corner-bl"></div> -->
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area">
+                    <h4 class="script-font text-3xl mb-4 text-center">Capítulo III</h4>
+                    <h5 class="text-center italic mb-6 text-gray-500">Frecuencias Digitales</h5>
+                    <p class="dropcap mb-4">El silencio posterior al encuentro fue insoportable. Dmauri sabía que
+                        dejarlo al
+                        azar sería un insulto al destino. Con las manos temblorosas, no por miedo, sino por exceso de
+                        adrenalina,
+                        tomó su teléfono. La pantalla iluminada era el único faro en su habitación oscura.
+                        Escribirle no era un acto comunicativo, era un acto de fe.
+                    </p>
+                    <p class="italic bg-white/50 p-4 border-l-2 border-yellow-600 mb-4">"No sé si crees en el destino...
+                        pero mis ojos no han dejado de buscarte. Vamos por un helado. Necesito saber si eres real"</p>
+                    <p>Mariana leyó el mensaje. El texto brillaba con una urgencia que le erizó la piel. Era directo,
+                        vanguardista en su honestidad, sin los juegos de poder habituales del cortejo moderno. Él no
+                        estaba jugando. Ella tampoco quería jugar.<br> Su respuesta fue breve, un <b>"sí"</b> que pesaba
+                        toneladas.
+                    </p>
+                </div>
+                <div class="page-number"></div>
+            </div>
+
+            <!-- PAGINA 13: CAPITULO 4 -->
+            <div class="page" id="p13">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area">
+                    <h4 class="script-font text-3xl mb-4 text-center">Capítulo IV</h4>
+                    <h5 class="text-center italic mb-6 text-gray-500">La Antesala del Vértigo</h5>
+                    <p class="dropcap mb-4">La noche cayó con una lentitud exasperante. Mariana se miró al espejo,
+                        no buscando belleza, sino verdad. Quería que él viera lo mismo que vio en la plaza, sin
+                        filtros, sin máscaras. Se vistió con la sensación de quien se prepara para una batalla o para
+                        una revelación.</p>
+                    <p>Dmauri llegó antes. Siempre llegaba antes. Observaba la calle, contando los segundos, midiendo el
+                        ritmo
+                        de su propia respiración. La ciudad parecía contener el aliento. La invitación a un helado era
+                        la excusa
+                        más inocente del mundo para lo que, en realidad, era un evento cataclísmico: la unión de dos
+                        sistemas solares.
+                        La banalidad del helado contrastaba con la profundidad del abismo al que estaban a punto de
+                        saltar juntos.</p>
+                </div>
+                <div class="page-number"></div>
+            </div>
+
+            <!-- PAGINA 14: CAPITULO 5 (PARTE 1) -->
+            <div class="page" id="p14">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area">
+                    <h4 class="script-font text-3xl mb-4 text-center">Capítulo V</h4>
+                    <h5 class="text-center italic mb-6 text-gray-500">La Noche Infinita del 19 de Mayo</h5>
+                    <p class="dropcap mb-4">La idea inocente del helado se disolvió rápidamente, incapaz de contener la
+                        tormenta que se avecinaba entre ambos. La noche pedía refugio, sombras y algo que quemara al
+                        bajar por la garganta. Dmauri y Mariana terminaron en un pub de luces bajas, donde la música era
+                        solo un telón de fondo para el sonido de sus propias voces.
+                        Se sentaron frente a frente, en una mesa pequeña que se sentía como una isla desierta.
+                    </p>
+                    <p>Lo que siguió fue un ritual de descubrimiento. No fueron una, ni dos, sino <b>once cervezas</b>
+                        las que
+                        marcaron el compás de las horas. Las botellas vacías se alineaban sobre la madera gastada no
+                        como trofeos de ebriedad, sino como relojes de arena que medían la profundidad de su inmersión.
+                    </p>
+                </div>
+                <div class="page-number"></div>
+            </div>
+
+            <!-- PAGINA 15: CAPITULO 5 (PARTE 2) -->
+            <div class="page" id="p15">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area">
+                    <!-- <h4 class="script-font text-3xl mb-4 text-center">Capítulo V</h4>
+                    <h5 class="text-center italic mb-6 text-gray-500">La Noche Infinita del 19 de Mayo</h5> -->
+                    <p class="dropcap mb-4">El alcohol no nubló sus sentidos; al contrario, actuó como un catalizador,
+                        disolviendo las defensas sociales y dejando sus esencias al desnudo. Con cada sorbo y cada
+                        confesión, la certeza se asentaba en el pecho de ambos con el peso de una verdad absoluta: eran
+                        almas gemelas. No era una frase hecha de novela barata; era una realidad física. Mariana sentía
+                        que Dmauri completaba frases que ella ni siquiera había pronunciado. Dmauri sentía que la risa
+                        de ella era un sonido que había extrañado durante siglos.
+                    </p>
+                    <p>Era la noche del <b>19 de mayo del año 2019</b>, y el tiempo exterior había muerto. Solo existía
+                        el
+                        tiempo de ellos. Cuando el bar cerró, la realidad los empujó hacia la calle. Dmauri,
+                        caballeroso, pero con el corazón galopando contra sus costillas, la acompañó hasta su casa.
+                    </p>
+                </div>
+                <div class="page-number"></div>
+            </div>
+
+            <!-- PAGINA 16: CAPITULO 5 (PARTE 3) -->
+            <div class="page" id="p16">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area">
+                    <p class="dropcap mb-4">El camino fue un silencio cargado de electricidad estática, ese tipo de
+                        silencio que es más
+                        ruidoso que los gritos.
+                        Al llegar al umbral de su puerta, se detuvieron. La luz de una farola parpadeante los bañaba en
+                        un tono ámbar. </p>
+                    <p>Dmauri se giró hacia ella y, al mirarla a los ojos, el mundo físico
+                        desapareció. En las pupilas de Mariana, él no vio solo un color; vio galaxias girando, nebulosas
+                        naciendo y
+                        muriendo. Ella, al sostenerle la mirada, vio el mismo universo infinito reflejado en él.
+                        La gravedad los atrajo. Dmauri se inclinó, acortando la distancia milímetro a
+                        milímetro. El aire entre sus labios se volvió denso, irrespirable. La intención del beso estaba
+                        ahí, vibrante, desesperada. Pero, justo en el borde del precipicio, ambos se detuvieron.
+
+                    </p>
+                    <p class="mt-4 italic">-No fue un rechazo- fue una revelación compartida.</p>
+                </div>
+                <div class="page-number"></div>
+            </div>
+
+            <!-- PAGINA 17: CAPITULO 5 (PARTE 4) -->
+            <div class="page" id="p17">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area">
+                    <p class="dropcap mb-4">Sin decir una palabra, ambos comprendieron que un beso en ese momento sería
+                        profano. Era demasiado pronto para consumir tanta magia. Lo que tenían era tan inmenso, tan
+                        aterradoramente real, que no podía sellarse con la prisa de una primera cita y once cervezas.
+                        Necesitaba tiempo para respirar.
+                    </p>
+                    <p class="mt-4 italic">—Aún no —parecieron decir sus ojos, comunicándose en ese idioma mudo que solo
+                        ellos entendían.</p>
+                    <p class="mt-4">Dmauri se alejó lentamente, sintiendo el fantasma de sus labios sobre los suyos.
+                        Mariana entró a casa temblando, no de frío, sino de la certeza de que esa noche, esa noche
+                        infinita del 19 de mayo, no había terminado. Apenas acababa de empezar.
+                        La historia no terminó. Simplemente, dejó de ser lineal para volverse eterna.
+                    </p>
+                </div>
+                <div class="page-number"></div>
+            </div>
+
+            <!-- PAGINA 18: EPILOGO -->
+            <div class="page" id="p18">
+                <div class="corner-ornament corner-tl"></div>
+                <div class="corner-ornament corner-tr"></div>
+                <div class="corner-ornament corner-bl"></div>
+                <div class="corner-ornament corner-br"></div>
+                <div class="content-area">
+                    <h3 class="script-font text-4xl text-center mb-6">Epílogo</h3>
+                    <p class="dropcap mb-4">Y así, el 19 de mayo se convirtió en el inicio de la eternidad. El
+                        destino,
+                        caprichoso y sabio, cerró el círculo que comenzó con una simple mirada en medio de la
+                        multitud
+                        ruidosa.</p>
+                    <p>La historia no termina con un punto final, sino con el comienzo de una promesa que se renueva
+                        cada mañana. El fin de esta historia es, en realidad, el prólogo de una vida nueva.</p><br>
+                    <p>"El viaje no ha terminado, pero la historia de este amor apenas comienza. Aquí, el destino
+                        se
+                        cumple,
+                        no como una casualidad, sino como la promesa solemne de dos almas. Al cerrar esta página,
+                        recuerde que el verdadero final es la certeza de que el amor eterno siempre encuentra su
+                        camino.
+                        Gracias por creer en:</p><br>
+                    <h5 class="text-center italic mb-6 text-gray-500">"UNA HISTORIA QUE CONTAR"</h>
+
+                        <div class="text-center mt-12 script-font text-3xl">Fin</div>
+                </div>
+                <div class="page-number"></div>
+            </div>
+
+        </div>
+
+        <!-- Controles de Navegación -->
+        <div class="controls-container">
+            <button onclick="prevPage()" class="btn-nav" id="btnPrev">Anterior</button>
+            <button onclick="nextPage()" class="btn-nav" id="btnNext">Siguiente</button>
+            <button onclick="toggleEditMode()" class="btn-nav" id="btnEdit">✏️ Editar</button>
+            <button onclick="addNewPage()" class="btn-nav" id="btnAddPage" style="display:none;">➕ Nueva Pag</button>
+            <button onclick="deletePage()" class="btn-nav" id="btnDelete" style="display:none;">🗑️ Eliminar</button>
+            <button onclick="saveChanges()" class="btn-nav" id="btnSave" style="display:none;">💾 Guardar</button>
+            <button onclick="resetBook()" class="btn-nav" id="btnReset" title="Restaurar original">🔄</button>
+
+        </div>
+    </div>
+
+    <script src="js/script.js?v=3"></script>
+</body>
+
+</html>
